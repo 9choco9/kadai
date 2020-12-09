@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="utf-8">
+<body>
+     <p>おみくじプログラム</p>
+     <button id="omikuji">おみくじを引く</button>
+
+     <script>
+         //おみくじを引くボタンのオブジェクトを取得
+         const omikuji = document.getElementById('omikuji')
+         //おみくじボタンにイベントリスナーを追加して、ボタンを押した時の処理を定義
+         omikuji.addEventListener('click', () => {
+             //ここでおみくじを引く処理をする
+             //ランダムで結果を表示する
+             const luck = Math.random()
+             if(luck > 0.9) {
+                 alert('大吉です!')
+             }else if (luck > 0.5) {
+                 alert('中吉です。')
+             }else {
+                 alert('凶です..')
+             }
+
+         })
+    </script>
+</body>
+</html>
